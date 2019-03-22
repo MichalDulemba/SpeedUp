@@ -9,6 +9,7 @@ To better see speed up I added 0.2s delay in processing functions (common_functi
 To make things easier i hardcoded number of files and send it to processes/threads. Usually it is less error prone than checking
 if queue is already/yet empty etc.
 
+Images are gathered "from internet" - if you are owner and want it to be removed - please email me. This was just for test/research.
 
 Some conclusions:
 1) it matters order how you "join" your processes or threads
