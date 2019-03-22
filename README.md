@@ -5,10 +5,11 @@ completely not optimised version to super-parallel version, that can be up to X 
 During those examples you will see how to get from 95s to 7s using threading and multiprocessing.
 To better see speed up I added 0.2s delay in processing functions (common_functions) - one function is creating thumbnail and another one is cutting out a small rectangle, changes color and pastes it back in.
 
-To make things easier i hardcoded number of files and send it to processes/threads. Usually it is less error prone than checking
-if queue is already/yet empty etc.
+To make things easier i hardcoded number of files and send it to processes/threads. Usually it is less error prone than checking if queue is already/yet empty etc.
 
-Images are gathered "from internet" - if you are owner and want it to be removed - please email me. This was just for test/research.
+Images were gathered "from internet" - if you are owner and want it to be removed - please email me. This was just for test/research.
+
+Results are based on I7-5930K CPU 3.5GHz (12 core), 64GB of RAM and Raid drive (2 drives in Raid 0 configuration).
 
 ### Some conclusions:
 1) It matters order how you "join" your processes or threads. It is better to put finishing step at the end.
@@ -23,7 +24,7 @@ It is good to add checking if queue is empty and possibly catch "empty queue" ex
 
 
 #### 1) Linear version (no speed up)
-- 1_single_process_and_thread.py  
+1_single_process_and_thread.py  
 Time: around 95s  
 
 #### 2) Version with one thread - for reading
