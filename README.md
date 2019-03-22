@@ -11,7 +11,7 @@ if queue is already/yet empty etc.
 
 Images are gathered "from internet" - if you are owner and want it to be removed - please email me. This was just for test/research.
 
-Some conclusions:
+### Some conclusions:
 1) it matters order how you "join" your processes or threads
 2) use traceback and try/except - without it there is no way to know what happened in the process/thread (why it hangs)
 3) it is good to add "ending" print at the exit of thread/process - this way you will know for sure that it joined main process
@@ -24,40 +24,40 @@ It is good to add checking if queue is empty and possibly catch "empty queue" ex
 
 
 
-1) Linear version (no speed up)
-- 1_single_process_and_thread.py
-Time: around 95s
+#### 1) Linear version (no speed up)
+- 1_single_process_and_thread.py  
+Time: around 95s  
 
-2) Version with one thread - for reading
-2_reading_thread.py
-Time: around 75s
+#### 2) Version with one thread - for reading
+2_reading_thread.py  
+Time: around 75s  
 
-3) Two threads - one for reading and one for writing
-3_two_threads_read_and_write.py
-Time: around 48s
+#### 3) Two threads - one for reading and one for writing
+3_two_threads_read_and_write.py  
+Time: around 48s  
 
-4) Four separate threads - one for reading, writing, creating small version and cutting out a small piece
-4_four_separate_threads.py
-Time: around 27s
+#### 4) Four separate threads - one for reading, writing, creating small version and cutting out a small piece
+4_four_separate_threads.py  
+Time: around 27s  
 
-5) Four separate processes - one for reading, writing, creating small version and cutting out a small piece
-5_four_processes.py
-Time: around 48s
+#### 5) Four separate processes - one for reading, writing, creating small version and cutting out a small piece
+5_four_processes.py  
+Time: around 48s  
 
-6) 8 processes - one for reading, two for writing, 5 for all other actions
-6_8_processes_5_do_all_processes.py
-Time: around 20s
+#### 6) 8 processes - one for reading, two for writing, 5 for all other actions
+6_8_processes_5_do_all_processes.py  
+Time: around 20s  
 
-7) 16 processes - 4 reading, 5 writing, 7 do_all processes
-7_16_processes.py
-Time: around 15s
+#### 7) 16 processes - 4 reading, 5 writing, 7 do_all processes
+7_16_processes.py  
+Time: around 15s  
 
-8) 19 processes - 9 writing, 10 do_all processes
-8_19_processes_10_do_all_processes.py
-Time: around 9s
+#### 8) 19 processes - 9 writing, 10 do_all processes
+8_19_processes_10_do_all_processes.py  
+Time: around 9s  
 
-9) 10 do_all processes 
-9_global_list_all_processes_with_reading_thread.py
-Time: around 7s
+#### 9) 10 do_all processes 
+9_global_list_all_processes_with_reading_thread.py  
+Time: around 7s  
 
 
