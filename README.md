@@ -11,14 +11,13 @@ if queue is already/yet empty etc.
 Images are gathered "from internet" - if you are owner and want it to be removed - please email me. This was just for test/research.
 
 ### Some conclusions:
-1) it matters order how you "join" your processes or threads
-2) use traceback and try/except - without it there is no way to know what happened in the process/thread (why it hangs)
-3) it is good to add "ending" print at the exit of thread/process - this way you will know for sure that it joined main process
-4) even with lock there is a chance that on the last element you will have sort of race condition (annoying to debug/fix)
+1) It matters order how you "join" your processes or threads. It is better to put finishing step at the end.
+2) Use traceback and try/except - without it there is no way to know what happened in the process/thread (why it hangs)
+3) It is good to add "ending" print at the exit of thread/process - this way you will know for sure that it joined main process
+4) Even with lock there is a chance that on the last element you will have sort of race condition (annoying to debug/fix)
 It is good to add checking if queue is empty and possibly catch "empty queue" exception (you will need to set timeout).
-5) you probably want to name your processes and threads to see what happens where in your logs
-6) if you want to profile program that is using threads or multiprocessing, you will probably need to profile each process/thread separately
-- otherwise you will get incorrect results.
+5) You probably want to name your processes and threads to see what happens where in your logs
+6) If you want to profile program that is using threads or multiprocessing, you will probably need to profile each process/thread separately - otherwise you will get incorrect results.
 
 
 
