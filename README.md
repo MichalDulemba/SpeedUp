@@ -3,8 +3,7 @@ completely not optimised version to super-parallel version, that can be up to X 
 (where X is number of cores in your processor)
 
 During those examples you will see how to get from 95s to 7s using threading and multiprocessing.
-To better see speed up I added 0.2s delay in processing functions (common_functions)
-- one function is creating thumbnail and another one is cutting out a small rectangle, changes color and pastes it back in.
+To better see speed up I added 0.2s delay in processing functions (common_functions) - one function is creating thumbnail and another one is cutting out a small rectangle, changes color and pastes it back in.
 
 To make things easier i hardcoded number of files and send it to processes/threads. Usually it is less error prone than checking
 if queue is already/yet empty etc.
